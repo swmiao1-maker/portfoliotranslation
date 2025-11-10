@@ -13,7 +13,7 @@
             background-color: #f5f5f5;
         }
         .navbar {
-            background-color: #333;
+            background-color: #000000;
             padding: 15px;
             margin-bottom: 30px;
         }
@@ -28,7 +28,7 @@
         }
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -38,6 +38,14 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
         }
         .portfolio-item img {
             max-width: 100%;
@@ -59,26 +67,33 @@
         <a href="index.html">Home</a>
         <a href="Glitches.html">Glitch Art</a>
         <a href="meme.html">Meme Art</a>
+        <a href="3dmodel.html">3D Model</a>
+        <a href="netart.html">Net.Art</a>
     </nav>
-    
+
     <h1>Welcome to My Creative Portfolio</h1>
-    <p>Explore my collection of digital art, including glitch art and meme creations.</p>
+    <p>Explore my collection of digital art and creative projects</p>
     
     <div class="portfolio-grid">
-        <div class="portfolio-item">
-            <a href="Glitches.html">
-                <img src="https://images.pexels.com/photos/36351/the-eleventh-hour-disaster-alarm-clock-clock.jpg?cs=srgb&dl=pexels-pixabay-36351.jpg&fm=jpg" alt="Glitch Art Collection" />
-                <h2>Glitch Art</h2>
-                <p>Explore my collection of digital glitch artwork</p>
-            </a>
-        </div>
-        <div class="portfolio-item">
-            <a href="meme.html">
-                <img src="https://sjsu.instructure.com/users/4615741/files/83759926/preview?verifier=bYaOX63OZjhNxxYEpCG6o1I5WBWfIg7CaFZVUIGd" alt="Meme Art Collection" />
-                <h2>Meme Art</h2>
-                <p>Check out my creative meme artwork</p>
-            </a>
-        </div>
+        <a href="Glitches.html" class="portfolio-item">
+            <img src="https://images.pexels.com/photos/36351/the-eleventh-hour-disaster-alarm-clock-clock.jpg?cs=srgb&dl=pexels-pixabay-36351.jpg&fm=jpg" alt="Glitch Art Collection" />
+            <h2>Glitch Art</h2>
+            <p>Explore my collection of digital glitch artwork</p>
+        </a>
+        <a href="meme.html" class="portfolio-item">
+            <img src="https://sjsu.instructure.com/users/4615741/files/83759926/preview?verifier=bYaOX63OZjhNxxYEpCG6o1I5WBWfIg7CaFZVUIGd" alt="Meme Art Collection" />
+            <h2>Meme Art</h2>
+            <p>Check out my creative meme artwork</p>
+        </a>
+        <a href="3dmodel.html" class="portfolio-item">
+            <img src="https://sjsu.instructure.com/users/4615741/files/83883680/preview?verifier=W6RrDx86Rz00YagGA2XWJB0nuOR1Xlb6Aq4x4LKX" alt="3D Model" />
+            <h2>3D Model</h2>
+            <p>View my three-dimensional digital designs</p>
+        </a>
+        <a href="netart.html" class="portfolio-item">
+            <h2>Net.Art</h2>
+            <p>Experience my interactive net-based artwork</p>
+        </a>
     </div>
 </body>
 </html>
