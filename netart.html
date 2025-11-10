@@ -47,12 +47,11 @@
         .netart-container {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 252, 248, 0.9);
+            background: rgba(255, 252, 248, 0.92);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(44, 24, 16, 0.15);
-            border: 1px solid rgba(44, 24, 16, 0.1);
-            opacity: 0; animation: fade-up 0.6s ease forwards;
+            border-radius: 14px;
+            box-shadow: 0 6px 14px rgba(44, 24, 16, 0.12);
+            border: 1px solid rgba(44, 24, 16, 0.08);
         }
         .netart-link {
             display: inline-block;
@@ -63,20 +62,7 @@
             border-radius: 8px;
             text-decoration: none;
         }
-        @keyframes fade-up { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
-        .netart-link {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 15px 30px;
-            background-color: #2c1810;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px; 
-            transition: background-color 0.3s ease;
-        }
-        .netart-link:hover {
-            background-color: #45a049;
-        }
+        .netart-link:hover { background-color: #45a049; }
         .description {
             max-width: 600px;
             margin: 20px auto;
