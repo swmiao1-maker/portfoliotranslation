@@ -10,12 +10,15 @@
             text-align: center;
             margin: 0;
             padding: 20px;
-            background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            /* animated library GIF (loops) */
+            background-image: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif');
             background-size: cover;
             background-attachment: fixed;
-            background-position: center;
+            background-position: center top;
             color: #2c1810;
             position: relative;
+            overflow-x: hidden;
+            animation: bg-pan 30s linear infinite;
         }
         body::before {
             content: '';
@@ -24,14 +27,21 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 250, 240, 0.92);
+            background-color: rgba(255, 250, 240, 0.9);
             z-index: -1;
+        }
+        @keyframes bg-pan {
+            0% { background-position: center top; }
+            50% { background-position: center center; }
+            100% { background-position: center bottom; }
         }
         .navbar {
             background-color: rgba(44, 24, 16, 0.95);
             padding: 15px;
             margin-bottom: 30px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            display: inline-block;
         }
         .navbar a {
             color: white;
@@ -78,6 +88,29 @@
             color: #666;
             margin-bottom: 15px;
         }
+        .portfolio-item {
+            background: rgba(255, 252, 248, 0.92);
+            padding: 20px;
+            border-radius: 14px; /* more rounded corners */
+            box-shadow: 0 6px 14px rgba(44, 24, 16, 0.12);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid rgba(44, 24, 16, 0.08);
+            transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 14px 30px rgba(44, 24, 16, 0.18);
+            background: rgba(255, 252, 248, 0.98);
+        }
+        /* entrance animation for items */
+        .portfolio-item { opacity: 0; transform-origin: center; animation: fade-up 0.6s ease forwards; }
+        .portfolio-item:nth-child(1) { animation-delay: 0.05s; }
+        .portfolio-item:nth-child(2) { animation-delay: 0.12s; }
+        .portfolio-item:nth-child(3) { animation-delay: 0.19s; }
+        .portfolio-item:nth-child(4) { animation-delay: 0.26s; }
+        @keyframes fade-up { from { opacity: 0; transform: translateY(10px) scale(0.998);} to { opacity: 1; transform: translateY(0) scale(1);} }
     </style>
 </head>
 <body>
