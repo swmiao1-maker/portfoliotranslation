@@ -6,16 +6,32 @@
     <title>Meme Art - My Portfolio</title>
     <style>
         body {
-            font-family: "Open Sans", sans-serif;
+            font-family: "Libre Baskerville", "Open Sans", serif;
             text-align: center;
             margin: 0;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #2c1810;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 250, 240, 0.92);
+            z-index: -1;
         }
         .navbar {
-            background-color: #333;
+            background-color: rgba(44, 24, 16, 0.95);
             padding: 15px;
             margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .navbar a {
             color: white;
@@ -29,10 +45,11 @@
         .meme-container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: rgba(255, 252, 248, 0.9);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(44, 24, 16, 0.15);
+            border: 1px solid rgba(44, 24, 16, 0.1);
         }
         .meme-container img {
             max-width: 100%;
